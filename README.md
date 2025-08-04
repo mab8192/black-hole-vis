@@ -2,6 +2,8 @@
 
 This is a simple and extensible C++ project template for Windows using VS Code and CMake. It supports automatic fetching and building of dependencies and provides full IntelliSense support in VS Code.
 
+The example in the template includes raylib and is fully executable within VS Code, e.g. `RUN AND DEBUG -> Launch MyProject`, or by hitting F5.
+
 ---
 
 ## ✅ Features

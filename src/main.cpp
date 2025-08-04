@@ -10,7 +10,7 @@ int main() {
     while (!WindowShouldClose()) {
         BeginDrawing();
         ClearBackground(RAYWHITE);
-        DrawText("Hello, raylib!", 350, 200, 20, DARKGRAY);
+        DrawText("Hello, raylib template project!", 250, 200, 20, RED);
         EndDrawing();
     }
 
