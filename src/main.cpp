@@ -1,18 +1,53 @@
 #include "raylib.h"
 
-int main() {
-    const int screenWidth = 800;
-    const int screenHeight = 450;
+struct BlackHole
+{
+    Vector2 pos;
+};
+
+struct Simulation
+{
+
+    void Init(int width, int height)
+    {
+    }
+
+    void Update(float dt)
+    {
+    }
+
+    void Draw()
+    {
+        BeginDrawing();
+        ClearBackground(BLACK);
+
+        DrawFPS(10, 10);
+        EndDrawing();
+    }
+
+    void Run()
+    {
+        while (!WindowShouldClose())
+        {
+            Update(GetFrameTime());
+
+            Draw();
+        }   
+    }
+};
+
+int main()
+{
+    const int screenWidth = 1600;
+    const int screenHeight = 900;
 
     InitWindow(screenWidth, screenHeight, "raylib + CMake + VS Code");
     SetTargetFPS(60);
 
-    while (!WindowShouldClose()) {
-        BeginDrawing();
-        ClearBackground(RAYWHITE);
-        DrawText("Hello, raylib template project!", 250, 200, 20, RED);
-        EndDrawing();
-    }
+    // Simulation Setup
+    Simulation sim;
+    sim.Init(screenWidth, screenHeight);
+    sim.Run();
 
     CloseWindow();
     return 0;
